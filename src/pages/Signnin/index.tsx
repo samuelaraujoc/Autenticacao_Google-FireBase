@@ -14,15 +14,17 @@ export function Signnin() {
             .then((result) => {
                 console.log(result.user);
                 setUser(result.user);
-            })
-            .catch((error) => {
+                
+            }).catch((error) => {
                 console.log(error);
             });
     }
     return (
         <div className="container">
+
             <div className='user'>
                 {user.photoURL && <img src={user.photoURL} alt="Foto do Usuário" />}
+
                 <strong>{user.displayName}</strong>
                 <small>{user.email}</small>
             </div>
